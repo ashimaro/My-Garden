@@ -1,6 +1,8 @@
 package model;
 
-/**
+/**Model - Model represents an object or JAVA POJO 
+ carrying data. It can also have logic to update 
+ controller if its data changes.
  *
  * @author Ashi
  */
