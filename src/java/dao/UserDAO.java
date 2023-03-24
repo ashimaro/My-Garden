@@ -37,9 +37,12 @@ public class UserDAO {
             myPS.executeUpdate();
 
        } catch (SQLException e) {
-        Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, "Error saving user to the database", e);
-        throw e;
+            System.out.println(e.getMessage());
+
+        } finally {
+           
+            con.close();
+        }
     }
-}
 
 }
