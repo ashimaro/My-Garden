@@ -26,7 +26,7 @@
                         <div class="login-wrap p-0">
                             <h3 class="mb-4 text-center">Have an account?</h3>
                             <form action="UserController" class="signin-form" method="post">
-                                 <center> <span style="color:red">${error}</span></center>
+                                <center> <span style="color:red">${error}</span></center>
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="username" placeholder="Username" required>
                                 </div>
@@ -35,7 +35,7 @@
                                     <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary submit px-3" name="action" value="signIn">Sign In</button>
+                                    <button type="submit" class="form-control btn btn-primary submit px-3" name="action" value="signIn" onclick=successLogin()>Sign In</button>
                                 </div>
                                 <div class="form-group d-md-flex">
                                     <div class="w-50">
@@ -56,12 +56,15 @@
                 </div>
             </div>
         </section>
-
         <script src="account_js/jquery.min.js"></script>
         <script src="account_js/popper.js"></script>
         <script src="account_js/bootstrap.min.js"></script>
         <script src="account_js/main.js"></script>
-
+        <script>
+          function successLogin() {
+          alert("Login Successfull!");
+          }
+        </script>
     </body>
 </html>
 
