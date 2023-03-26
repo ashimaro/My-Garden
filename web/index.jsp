@@ -46,10 +46,10 @@
                                     </div>
                                 </div>
                             </form>
-                            <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+                            
                             <div class="social d-flex text-center">
 
-                                <a href="registerAccount.jsp" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span>Register</a>
+                                <a href="registerAccount.jsp" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span>Sign Up Here</a>
                             </div>
                         </div>
                     </div>
