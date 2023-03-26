@@ -24,7 +24,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6 col-lg-4">
                         <div class="login-wrap p-0">
-                            <h3 class="mb-4 text-center">Register</h3>
+                            <h3 class="mb-4 text-center">Sign Up</h3>
                              <center> <span style="color:red">${errorMessage}</span></center> <%-- display error message --%>
                             <form class="signin-form" action="<%=request.getContextPath()%>/UserController" method="POST" >
                                 <div class="form-group">
@@ -38,7 +38,7 @@
                                     <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" name='action' value='register'  class="form-control btn btn-primary submit px-3">Sign In</button>
+                                    <button type="submit" name='action' value='register'  class="form-control btn btn-primary submit px-3">Sign Up</button>
                                 </div>
                             </form>
                             <div class="form-group d-md-flex">
@@ -49,10 +49,9 @@
                                 </div>
                             </div>
 
-                            <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
                             <div class="social d-flex text-center">
 
-                                <a href="index.jsp" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span>Login</a>
+                                <a href="index.jsp" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span>Already have account?</a>
                             </div>
                         </div>
                     </div>
