@@ -37,7 +37,7 @@
                                     <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" name='action' value='register' class="form-control btn btn-primary submit px-3">Sign In</button>
+                                    <button type="submit" name='action' value='register' onclick=successRegister() class="form-control btn btn-primary submit px-3">Sign In</button>
                                 </div>
                                 </form>
                                 <div class="form-group d-md-flex">
@@ -64,7 +64,11 @@
         <script src="account_js/popper.js"></script>
         <script src="account_js/bootstrap.min.js"></script>
         <script src="account_js/main.js"></script>
-
+        <script>
+            function successRegister(){
+                alert("Register Successfull! Now you can login")
+            }
+        </script>
     </body>
 </html>
 
