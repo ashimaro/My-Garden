@@ -102,6 +102,16 @@ public class UserController extends HttpServlet {
     String password = req.getParameter("password");
 
     //check if password meets criteria
+ /*
+ ^ - start of string anchor
+(?=.*[0-9]) - positive lookahead assertion for at least one digit
+(?=.*[a-z]) - positive lookahead assertion for at least one lowercase letter
+(?=.*[A-Z]) - positive lookahead assertion for at least one uppercase letter
+(?=.*[@#$%^&+=]) - positive lookahead assertion for at least one special character (here, @#$%^&+=)
+(?=\\S+$) - positive lookahead assertion for no whitespace characters in the entire string
+.{8,} - match any character (except newline) at least 8 times
+$ - end of string anchor */
+ 
     boolean isValidPassword = password.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$");
 
     if (!isValidPassword) {
@@ -110,7 +120,6 @@ public class UserController extends HttpServlet {
         req.getRequestDispatcher("registerAccount.jsp").forward(req, resp);
         return;
     }
-
     //keep data into javabeans
     User newUser = new User();
 
@@ -124,7 +133,7 @@ public class UserController extends HttpServlet {
 
     //save the bean as attribute and pass to view
     req.setAttribute("user", newUser);
-    req.setAttribute("successMessage", "User saved successfully!");
+   
     resp.sendRedirect("index.jsp");
 }
 
