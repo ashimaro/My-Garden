@@ -16,8 +16,9 @@ import javax.servlet.http.HttpSession;
 import model.User;
 
 /**
- *
- * @author User
+ *Controller acts on model and view. It controls the data flow model obj and updates the view whenever data changes.
+ * keeps view and model separate
+ * @author Ashi
  */
 @WebServlet(name = "UserController", urlPatterns = {"/UserController"})
 public class UserController extends HttpServlet {
@@ -136,8 +137,6 @@ $ - end of string anchor */
    
     resp.sendRedirect("index.jsp");
 }
-
-
     private void searchUser(HttpServletRequest req, HttpServletResponse resp)
             throws SQLException, ServletException, IOException, ClassNotFoundException {
 
